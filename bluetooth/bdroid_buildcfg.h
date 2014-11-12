@@ -19,7 +19,7 @@
 #define _BDROID_BUILDCFG_H
 
 #define BTM_DEF_LOCAL_NAME   "Moto G"
-#define BLUETOOTH_QCOM_SW TRUE
+#define BLUETOOTH_QTI_SW TRUE
 // Enables Interleave scan
 #define BTA_HOST_INTERLEAVE_SEARCH  TRUE
 // Disables read remote device feature
