@@ -41,8 +41,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += fstab.qcom
 #wlan driver
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8226/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/qcom/msm8226/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+    device/qcom/msm8226/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
@@ -105,12 +104,12 @@ endif
 endif # TARGET_USES_QCA_NFC
 
 PRODUCT_BOOT_JARS += qcmediaplayer \
-                     WfdCommon \
-                     oem-services \
-                     qcom.fmradio \
                      org.codeaurora.Performance \
                      vcard \
                      tcmiface
+#qcom.fmradio \
+#WfdCommon \
+#oem-services \
 
 PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
