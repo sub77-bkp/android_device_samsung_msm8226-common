@@ -4,9 +4,8 @@ LOCAL_PATH := $(call my-dir)
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
-TARGET_KERNEL_SOURCE := kernel/
 
-include kernel/AndroidKernel.mk
+include $(TARGET_KERNEL_SOURCE)/AndroidKernel.mk
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
