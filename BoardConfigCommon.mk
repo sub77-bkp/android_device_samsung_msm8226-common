@@ -84,6 +84,9 @@ EXTENDED_FONT_FOOTPRINT := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# Memory
+MALLOC_IMPL := dlmalloc
+
 # Motorola
 TARGET_USES_MOTOROLA_LOG := true
 
