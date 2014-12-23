@@ -122,6 +122,9 @@ ifeq ($(HOST_OS),linux)
  TARGET_USERIMAGES_USE_F2FS := true
 endif
 
+# SELinux
+-include device/qcom/sepolicy/sepolicy.mk
+
 # Vold
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
