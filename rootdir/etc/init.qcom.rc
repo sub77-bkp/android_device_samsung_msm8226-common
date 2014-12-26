@@ -627,6 +627,7 @@ service mmi-touch-sh /system/bin/logwrapper /system/bin/sh /init.mmi.touch.sh sy
 
 service moto_charge_only_mode /system/bin/charge_only_mode
     user root
+    group root system
     disabled
 
 on property:installd.post_fs_data_ready=1
