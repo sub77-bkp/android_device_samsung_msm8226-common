@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
 
 #fstab.qcom
 PRODUCT_PACKAGES += fstab.qcom
+
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8226/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
@@ -107,9 +108,9 @@ PRODUCT_BOOT_JARS += qcmediaplayer \
                      org.codeaurora.Performance \
                      vcard \
                      tcmiface
-#qcom.fmradio \
+#oem-services
 #WfdCommon \
-#oem-services \
+#qcom.fmradio \
 
 PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
