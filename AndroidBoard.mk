@@ -1,26 +1,9 @@
 LOCAL_PATH := $(call my-dir)
 
-#----------------------------------------------------------------------
-# Compile (L)ittle (K)ernel bootloader and the nandwrite utility
-#----------------------------------------------------------------------
-ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
-
-# Compile
-include bootable/bootloader/lk/AndroidBoot.mk
-
-$(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
-	$(transform-prebuilt-to-target)
-$(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
-
-droidcore: $(INSTALLED_BOOTLOADER_MODULE)
-endif
 
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
-ifeq ($(KERNEL_DEFCONFIG),)
-    KERNEL_DEFCONFIG := msm8226_defconfig
-endif
 
 include kernel/AndroidKernel.mk
 
@@ -120,13 +103,6 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
 LOCAL_SRC_FILES    := hostapd.deny
 include $(BUILD_PREBUILT)
-
-#Create symbolic links
-$(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
-        ln -sf /persist/WCNSS_qcom_wlan_nv.bin \
-        $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin; \
-        ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
-        $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 
 endif
 
