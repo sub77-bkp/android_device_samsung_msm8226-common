@@ -839,6 +839,7 @@ service xtwifi_inet /system/bin/xtwifi-inet-agent
     disabled
 
 # Charger
+# androidboot.powerup_reason=0x00000010 bootreason=usb_cable
 on property:ro.bootmode=mot-charger
     mount_all fstab.qcom
     write /sys/module/lpm_levels/enable_low_power/l2 1
