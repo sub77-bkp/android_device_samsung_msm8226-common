@@ -101,8 +101,7 @@ PRODUCT_PACKAGES += \
     copybit.msm8226 \
     gralloc.msm8226 \
     hwcomposer.msm8226 \
-    memtrack.msm8226 \
-    liboverlay
+    memtrack.msm8226
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -167,9 +166,7 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libdashplayer \
-    libdivxdrmdecrypt \
     libOmxCore \
     libOmxVdec \
     libOmxVdecHevc \
@@ -204,10 +201,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf
 
-# Torch
-PRODUCT_PACKAGES += \
-    Torch
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
@@ -216,8 +209,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd_default.conf \
-    hostapd.accept \
-    hostapd.deny \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
