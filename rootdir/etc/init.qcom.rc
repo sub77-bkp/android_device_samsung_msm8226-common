@@ -490,6 +490,13 @@ on boot
     setprop ro.hw.hwrev ${ro.boot.hwrev}
     setprop ro.hw.radio ${ro.boot.radio}
 
+# Allow usb charging to be disabled persistently
+on property:persist.usb.chgdisabled=1
+    write /sys/class/power_supply/battery/charging_enabled 0
+
+on property:persist.usb.chgdisabled=0
+    write /sys/class/power_supply/battery/charging_enabled 1
+
 # Services start here
 
 service adsprpcd /system/bin/adsprpcd
