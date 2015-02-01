@@ -99,13 +99,7 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-$(warning "USING F2FS for userdata")
-
-# This ensures the needed build tools are available.
-# TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
-ifeq ($(HOST_OS),linux)
- TARGET_USERIMAGES_USE_F2FS := true
-endif
+TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
