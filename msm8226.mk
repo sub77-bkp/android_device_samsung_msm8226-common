@@ -108,10 +108,10 @@ endif # TARGET_USES_QCA_NFC
 PRODUCT_BOOT_JARS += qcmediaplayer \
                      org.codeaurora.Performance \
                      vcard \
-                     tcmiface
-#oem-services
-#WfdCommon \
-#qcom.fmradio \
+                     tcmiface \
+		     oem-services \
+		     WfdCommon \
+	 	     qcom.fmradio
 
 PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
