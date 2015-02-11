@@ -102,3 +102,5 @@ HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_IMPL := dlmalloc
 
+#Disable memcpy_base.S optimization
+TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
