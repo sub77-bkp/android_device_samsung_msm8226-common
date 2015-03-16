@@ -103,6 +103,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8226-common
+
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
 
