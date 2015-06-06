@@ -1,8 +1,4 @@
 allow mm-qcamerad qdsp_device:chr_file { open read ioctl };
-allow mm-qcamerad system_server:unix_stream_socket { read write };
-allow servicemanager mm-qcamerad:dir search;
-allow servicemanager mm-qcamerad:file { open read };
-allow servicemanager mm-qcamerad:process { getattr };
-binder_call(mm-qcamerad, servicemanager)
-binder_call(mm-qcamerad, system_server)
-unix_socket_connect(mm-qcamerad, mpctl, mpdecision)
+allow mm-qcamerad sysfs_camera:dir search;
+allow mm-qcamerad sysfs_camera:file { getattr open read write };
+type_transition mm-qcamerad system_data_file:sock_file camera_socket "cam_socket3";
